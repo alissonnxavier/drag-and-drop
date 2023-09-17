@@ -4,6 +4,8 @@ import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
 import clsx from 'clsx';
 import { Button } from '../Button';
+import { BsArrowsMove } from 'react-icons/bs';
+import { Badge } from '../ui/badge';
 
 const Container = ({
   id,
@@ -39,20 +41,25 @@ const Container = ({
       )}
     >
       <div className="flex items-center justify-between">
-        <div className="flex flex-col gap-y-1">
-          <h1 className="text-gray-800 text-xl">{title}</h1>
+        <div className="flex flex-col  items-center">
+          <h1 className="text-gray-800 text-xl">
+            <Badge className='bg-slate-900 text-white underline decoration-white p-2 ' variant='outline'>
+              {title}
+            </Badge>
+          </h1>
           <p className="text-gray-400 text-sm">{description}</p>
         </div>
         <button
-          className="border p-2 text-xs rounded-xl hover:bg-amber-200  hover:shadow-sm"
+          className="border p-2 flex flex-row items-center justify-center text-xs rounded-xl hover:bg-green-100  hover:shadow-sm"
           {...listeners}
         >
-          Drag Handle
+          Move column  <BsArrowsMove size={24} className='px-1 hover:scale-90'/>
+
         </button>
       </div>
 
       {children}
-      <Button variant="ghost" onClick={onAddItem}>
+      <Button variant="ghost" onClick={onAddItem} className='bg-green-400 hover:border-green-900 hover:border-4'>
         Add Item
       </Button>
     </div>

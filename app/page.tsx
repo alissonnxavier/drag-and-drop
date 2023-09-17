@@ -374,8 +374,8 @@ export default function Home() {
           <Button onClick={onAddItem}>Add Item</Button>
         </div>
       </Modal>
-      <div className="flex items-center justify-between gap-y-2">
-        <h1 className="text-gray-800 text-3xl font-bold">Drag and drop</h1>
+      <div className="flex items-center justify-around gap-y-2">
+        <h1 className="text-gray-800 text-3xl font-bold">DRAG AND DROP</h1>
         <Button onClick={() => setShowAddContainerModal(true)}>
           Add Container
         </Button>
