@@ -37,8 +37,11 @@ const Items = ({ id, title }: ItemsType) => {
         isDragging && 'opacity-50',
       )}
     >
-      <div className="flex hover:border-green-800 hover:border-2 p-0.5 hover:p-0 rounded-lg items-center text-xs justify-between r">
-        {title}
+      <div className="flex hover:border-green-400 hover:border-2 p-0.5 hover:p-0 rounded-lg items-center text-xs justify-between ">
+        <div className='m-1'>
+          {title}
+        </div>
+        
         <button
           className=" p-2 text-xs rounded-xl hover:shadow-sm hover:bg-green-200"
           {...listeners}
