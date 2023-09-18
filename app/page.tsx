@@ -342,7 +342,7 @@ export default function Home() {
   }
 
   return (
-    <div className="mx-auto py-10 bg-slate-200">
+    <div className="mx-auto py-10 bg-slate-200 max-h-full">
       {/* Add Container Modal */}
       <Modal
         showModal={showAddContainerModal}
@@ -380,8 +380,8 @@ export default function Home() {
           Add Container
         </Button>
       </div>
-      <div className="mt-10">
-        <div className="grid grid-cols-3 gap-6">
+      <div className="mt-10 ">
+        <div className="flex justify-center">
           <DndContext
             sensors={sensors}
             collisionDetection={closestCorners}

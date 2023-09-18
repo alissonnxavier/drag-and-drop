@@ -36,7 +36,7 @@ const Container = ({
         transform: CSS.Translate.toString(transform),
       }}
       className={clsx(
-        'w-64 h-full p-4 m-4 bg-gray-50 rounded-xl flex flex-col gap-y-4',
+        'w-64 h-full p-4 m-4 bg-slate-100 rounded-xl shadow-lg hover:shadow-sm hover:shadow-cyan-500/50 shadow-cyan-500/50 flex flex-col gap-y-4',
         isDragging && 'opacity-50',
       )}
     >
